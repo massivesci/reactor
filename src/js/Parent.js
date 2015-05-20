@@ -1,3 +1,5 @@
+var React = require('react');
+
 var Child = require('./Child');
 
 var Parent = React.createClass({

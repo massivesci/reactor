@@ -17,7 +17,6 @@ var path = {
   ENTRY_POINT: './src/js/App.js'
 };
 
-/*** DEV TASKS ***/
 gulp.task('copy', function(){
   gulp.src(path.HTML)
     .pipe(gulp.dest(path.DEST));
@@ -30,6 +29,7 @@ gulp.task('watch', function() {
     entries: [path.ENTRY_POINT],
     transform: [reactify],
     debug: true,
+    require: 'react',
     cache: {}, packageCache: {}, fullPaths: true
   }));
 
@@ -44,13 +44,10 @@ gulp.task('watch', function() {
     .pipe(gulp.dest(path.DEST_SRC));
 });
 
-gulp.task('default', ['watch']);
-
-/*** PROD TASKS ***/
 gulp.task('build', function(){
   browserify({
     entries: [path.ENTRY_POINT],
-    transform: [reactify]
+    transform: [reactify],
   })
     .bundle()
     .pipe(source(path.MINIFIED_OUT))
@@ -67,3 +64,5 @@ gulp.task('replaceHTML', function(){
 });
 
 gulp.task('production', ['replaceHTML', 'build']);
+
+gulp.task('default', ['watch', 'copy']);
