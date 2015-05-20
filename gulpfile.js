@@ -29,9 +29,8 @@ gulp.task('watch', function() {
     entries: [path.ENTRY_POINT],
     transform: [reactify],
     debug: true,
-    require: 'react',
     cache: {}, packageCache: {}, fullPaths: true
-  }));
+  }).require('react', { exports: 'react' }));
 
   return watcher.on('update', function () {
     watcher.bundle()
@@ -65,4 +64,4 @@ gulp.task('replaceHTML', function(){
 
 gulp.task('production', ['replaceHTML', 'build']);
 
-gulp.task('default', ['watch', 'copy']);
+gulp.task('default', ['copy', 'watch']);
