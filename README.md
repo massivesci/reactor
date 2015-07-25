@@ -1,5 +1,5 @@
 # Reactor
-## Worb Corp.'s starter kit for React front-end projects.
+## Worb Co.'s starter kit for statically generated React front-end projects.
 
 ### Dev
 Assumes nodenv with the version in .node-version installed.
