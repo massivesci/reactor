@@ -7,8 +7,9 @@
 \**********************************************************/
 
 var React = require('react');
+var RouteHandler = require('react-router').RouteHandler;
 
-var App = React.createClass({
+var Root = React.createClass({
   // The entry point of the application
   render: function(){
     return (
@@ -21,7 +22,7 @@ var App = React.createClass({
           </head>
           <body>
             <div key="app">
-                Home
+            <RouteHandler />
             </div>
             <script src="/dist/bundle.js"/>
           </body>
@@ -30,4 +31,4 @@ var App = React.createClass({
   }
 });
 
-module.exports = App;
+module.exports = Root;
