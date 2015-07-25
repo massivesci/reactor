@@ -3,10 +3,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
 
 var routes = [
-    {
-        path: '/',
-        output: '/index.html'
-    }
+    '/',
+    '/slug'
 ];
 
 // plugins and devtool for dev

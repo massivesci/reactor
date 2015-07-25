@@ -1,5 +1,5 @@
 /**********************************************************\
-** About.jsx                                              **
+** Static.jsx                                             **
 **                                                        **
 ** The root node of the Reactor app.                      **
 **                                                        **
@@ -8,14 +8,14 @@
 
 var React = require('react');
 
-var About = React.createClass({
+var Static = React.createClass({
   render: function(){
     return (
       <div>
-          <h1>About</h1>
+          <h1>{this.props.params.slug}</h1>
       </div>
     );
   }
 });
 
-module.exports = About;
+module.exports = Static;

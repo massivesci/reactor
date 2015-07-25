@@ -8,7 +8,7 @@ require('./less/app.less');
 // export required by static gen webpack plugin. Runs on server, returns html via callback
 module.exports = function(path, props, callback) {
     Router.run(Routes, path, function(Root, state){
-        var html = React.renderToString(React.createElement(Root, props));
+        var html = React.renderToString(React.createElement(Root));
         callback('<!DOCTYPE html>' + html)
     });
 }
