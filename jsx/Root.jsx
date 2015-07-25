@@ -6,27 +6,33 @@
 ** Designed and engineered by Worb Corp.                  **
 \**********************************************************/
 
+// Libs
 var React = require('react');
 var RouteHandler = require('react-router').RouteHandler;
+var Link = require('react-router').Link;
+
+//Components
+var Nav = require('./Nav.jsx');
 
 var Root = React.createClass({
   // The entry point of the application
   render: function(){
     return (
-      <html>
-          <head>
-              <title>{this.props.title}</title>
-              <meta name="viewport" content="width=device-width" />
-              <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-              <link href='/dist/style.css' rel='stylesheet' type='text/css' />
-          </head>
-          <body>
-            <div key="app">
-            <RouteHandler />
-            </div>
-            <script src="/dist/bundle.js"/>
-          </body>
-      </html>
+        <html>
+            <head>
+                <title>{this.props.title}</title>
+                <meta name="viewport" content="width=device-width" />
+                <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+                <link href='/dist/style.css' rel='stylesheet' type='text/css' />
+            </head>
+            <body>
+                <Nav />
+                <div key="app">
+                    <RouteHandler />
+                </div>
+                <script src="/dist/bundle.js"/>
+            </body>
+        </html>
     );
   }
 });
