@@ -1,19 +1,20 @@
-# Reactor
-## Worb Co.'s starter kit for statically generated React front-end projects.
+# Reactor is Worb Co.’s starter kit for statically generated React front-end projects.
 
-### Dev
-Assumes nodenv with the version in .node-version installed.
+Assumes `nodenv` and the Node.js version specified in a `.node-version` file.
+
+## Installation
 
 1. `npm install --global webpack`
 2. `npm install --global webpack-dev-server`
 3. `npm install`
-4. `npm run dev`
-5. Navigate to: http://localhost:8080
 
-### Build
-Assumes 1-3 above.
+## Development
 
-1. `npm run prod`
+`npm run dev` and then navigate to `http://localhost:8080`
 
-### Credit Where Due
+## Production
+
+`npm run prod`
+
+## Credit Where Due
 https://github.com/jxnblk/react-static-site-boilerplate
