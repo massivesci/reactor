@@ -20,7 +20,12 @@ var About = require('./About.jsx')
 var NotFound = require('./NotFound.jsx');
 var Static = require('./Static.jsx');
 
-// Routes
+/* Routes
+Any routes defined before the slug route will
+load from their handlers. Otherwise, slug will
+act as a catch-all.
+TODO: Implement 404 handling in slug component.
+*/
 var Routes = (
   <Route handler={Root} path='/' name="App">
     <Route path='/about' name="About" handler={About} />
