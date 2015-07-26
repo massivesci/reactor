@@ -4,12 +4,14 @@ var webpack = require('webpack');
 
 var routes = [
     '/',
+    '/about',
+    '/home',
     '/slug'
 ];
 
 // plugins and devtool for dev
 var plugins = [
-    new StaticSiteGeneratorPlugin('/dist/bundle.js', routes),
+    new StaticSiteGeneratorPlugin('/dist/bundle.js', routes, {}, './md'),
     new ExtractTextPlugin('/dist/style.css')
 ];
 var devtool = "eval-source-map";
