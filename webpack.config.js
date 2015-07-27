@@ -11,7 +11,7 @@ var routes = [
 
 // plugins and devtool for dev
 var plugins = [
-    new StaticSiteGeneratorPlugin('/dist/bundle.js', routes, {}, './md'),
+    new StaticSiteGeneratorPlugin('/dist/bundle.js', routes, {}),
     new ExtractTextPlugin('/dist/style.css')
 ];
 var devtool = "eval-source-map";
