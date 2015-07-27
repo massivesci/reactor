@@ -8,14 +8,22 @@
 
 var React = require('react');
 
+
 var Static = React.createClass({
-  render: function(){
-    return (
-      <div>
-          <h1>{this.props.params.slug}</h1>
-      </div>
-    );
-  }
+    getInitialState: function() {
+        var staticContent = require('../md/' + this.props.params.slug + '.md')
+        return {
+            staticContent: staticContent
+        }
+    },
+    render: function(){
+        return (
+            <div>
+                <h1>{this.props.params.slug}</h1>
+                <div dangerouslySetInnerHTML={{__html: this.state.staticContent}} />
+            </div>
+        );
+    }
 });
 
 module.exports = Static;

@@ -31,6 +31,8 @@
     "less-loader": "^2.2.0",
     "node-libs-browser": "^0.5.2",
     "static-render-webpack-plugin": "^0.1.2",
-    "style-loader": "^0.12.3"
+    "style-loader": "^0.12.3",
+    "html-loader": "^0.3.0",
+    "markdown-loader": "^0.1.3"
   }
 }

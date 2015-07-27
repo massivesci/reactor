@@ -27,7 +27,7 @@ var Root = React.createClass({
             </head>
             <body>
                 <Nav />
-                <div key="app">
+                <div id="app">
                     <RouteHandler />
                 </div>
                 <script src="/dist/bundle.js"/>

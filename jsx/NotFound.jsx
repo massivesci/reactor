@@ -11,7 +11,7 @@ var React = require('react');
 var NotFound = React.createClass({
   render: function(){
     return (
-      <div>Note Found</div>
+      <div>Not Found</div>
     );
   }
 });

@@ -6,7 +6,7 @@ var routes = [
     '/',
     '/about',
     '/home',
-    '/slug'
+    '/static-test'
 ];
 
 // plugins and devtool for dev
@@ -41,6 +41,10 @@ module.exports = {
             {
                 test: /\.less$/,
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+            },
+            {
+                test: /\.md$/,
+                loader: 'html!markdown'
             }
         ]
     },
